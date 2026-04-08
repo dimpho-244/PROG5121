@@ -9,8 +9,9 @@ package com.mycompany.st10464062poepart1;
  * @author user
  */
 public class Login {
+    String enetredUser;
+    String enetredPasword;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    
+    public boolean checkUsername() {
 }

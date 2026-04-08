@@ -72,7 +72,7 @@ public class Registration {
             setFirstname();
             setSurname();
             setUsername();
-            setpassword();
+            setPasword();
             
             
                 loginObject.registerUser();

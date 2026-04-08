@@ -4,6 +4,7 @@
 
 package com.mycompany.st10464062poepart1;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author user
@@ -14,4 +15,9 @@ public class Login {
 
     
     public boolean checkUsername() {
+        
+        return (Registration.getUsername().contains("_")&& Registration.getUsername().length() <=5);
+        
+    }
+    
 }

@@ -24,5 +24,9 @@ public class Registration {
     public static void setUsername(){
         Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
     }
+    public static String getUsername(){
+        
+        return Username;
+    }
 }
 

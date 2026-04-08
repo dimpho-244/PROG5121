@@ -57,10 +57,15 @@ public class Registration {
     } 
         public static String getFirstName(){
             
-            return FirstName;
+            return Firstname;
         }
         
-        public ststic voi
+     public static void setSurname(){
+        Surname = JOptionPane.showInputDialog("What is your Surname");
+    } 
+        public static String getSurname(){
+            
+            return Surname;
     }
 }
 

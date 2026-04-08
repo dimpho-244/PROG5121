@@ -21,6 +21,7 @@ public class Registration {
     public static String Surname    = "";  
     private static String Password = "";
     private static String Username = "";
+    private static String Cellphone = "";
 
     public static void setUsername(){
         Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
@@ -38,8 +39,9 @@ public class Registration {
         
         return Password;
     }
-    private static String cellphone(){
-        private static final String PHONE_REGEX = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
+    public static boolean isValidPhoneNumber(String phoneNumber){
+         String PHONE_REGEX = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
+         return Pattern.matches(PHONE_REGEX, phoneNumber);
         
     }
     public static void setFirstname(){

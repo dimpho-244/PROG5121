@@ -66,6 +66,20 @@ public class Registration {
         public static String getSurname(){
             
             return Surname;
+            
+        }
+        public static void main(String[] args) {
+            setFirtName();
+            setSurname();
+            setUserName();
+            setPassword();
+            
+            
+                loginObject.registerUser();
+                
+                JOptionPane.showMessageDialog(null,loginObject.returnLoginStatus());
+                
+                
     }
 }
 

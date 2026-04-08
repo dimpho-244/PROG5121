@@ -46,7 +46,62 @@ public class Login {
                               
                                         }
                                         }
+                                        
+                                        
+                            }
                             
+                                    return (isUpper && isNumber && isSpecialCharecter)
+                                            
+                            }               
+                        
+                        //Method enusres the necessary registration mesage and the username is formatted properly or not
+                        
+                               public String registerUser(){
+                                   
+                                   
+                                  String nameoutput;
+                                  String passwordpoutput;
+                                  
+                                  if (checkUserName()){
+                                      nameoutput = "Username successfully captured;";
+                                  }
+                                  else{
+                                      nameoutput = "Username is not correctlty formatted please make sure username incudes an underscore and is no more than 5 charecters in length";
+                                      
+                                  }
+                                  
+                                  if (checkPasswordComplexity()){
+                                      passwordpoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
+                                      
+                                  }
+                                  return passwordpoutput + "\n" + nameoutput;
+                                  
+                               }}
+                                    //Method ensure that the users login details match the users detals when they firts registered
+                                    
+                                    public boolean loginUser(){
+                                        
+                                       enteredUserName =JOptionPane.showInputDialog("Enter the username you used to create this account");
+                                       
+                                       enteredPassword =JOptionPane.showInputDialog("Enter the password you used to create this account");
+                                       
+                                       
+                                       return Registration.getUsername().equals(enteredUerName) &&Registration.getPassword().equals(enteredPassword);
+                                       
+                                       
+                                    //Method returns the necessary messaging for a succesful login or a afailed login
+                                    
+                                        public String returnLoginStatus(){
+                                            
+                                            
+                                            if (loginUser(){
+                                                return "Welcome + Reistration.FirstName +  " " + Registration.Surname + " it is great to see you again" ; 
+                                                
+                                                
+                                                return "Username or password incorrect, please try again.";
+                                  }
+                               }                             
+                                            
                         }
             }
 }

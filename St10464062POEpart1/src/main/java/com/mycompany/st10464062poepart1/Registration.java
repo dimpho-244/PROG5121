@@ -42,8 +42,16 @@ public class Registration {
     public static boolean isValidPhoneNumber(String phoneNumber){
          String PHONE_REGEX = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
          return Pattern.matches(PHONE_REGEX, phoneNumber);
-        
     }
+    
+     public static void setCellphoneNumber(){
+         Cellphone = JOptionPane.showInputDialog("Enter cellphone number");
+    
+     if (isValidPhoneNumber(Cellphone)){
+         JOptionPane.showMessageDialog(null, "Cellphone numer succefullyb added");
+} else{JOptionPane.showMessageDialog(null, "Cellphone number incorrectely formatted or does not  contain international code");
+        }
+     }
     public static void setFirstname(){
         Firstname = JOptionPane.showInputDialog("What is your first name");
     } 

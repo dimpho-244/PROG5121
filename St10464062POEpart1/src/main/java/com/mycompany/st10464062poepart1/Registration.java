@@ -18,7 +18,7 @@ public class Registration {
     static Scanner input = new Scanner(System.in);
     
     public static String Firstname = "";
-    public static String Surname    = "";  
+    public static String Surname   = "";  
     private static String Password = "";
     private static String Username = "";
     private static String Cellphone = "";
@@ -48,7 +48,7 @@ public class Registration {
          Cellphone = JOptionPane.showInputDialog("Enter cellphone number");
     
      if (isValidPhoneNumber(Cellphone)){
-         JOptionPane.showMessageDialog(null, "Cellphone numer succefullyb added");
+         JOptionPane.showMessageDialog(null, "Cellphone numer succefully added");
 } else{JOptionPane.showMessageDialog(null, "Cellphone number incorrectely formatted or does not  contain international code");
         }
      }
@@ -69,10 +69,10 @@ public class Registration {
             
         }
         public static void main(String[] args) {
-            setFirtName();
+            setFirstname();
             setSurname();
-            setUserName();
-            setPassword();
+            setUsername();
+            setpassword();
             
             
                 loginObject.registerUser();
@@ -80,6 +80,8 @@ public class Registration {
                 JOptionPane.showMessageDialog(null,loginObject.returnLoginStatus());
                 
                 
+        }
+                
     }
-}
+
 

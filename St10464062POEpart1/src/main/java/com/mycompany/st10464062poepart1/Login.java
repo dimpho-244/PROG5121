@@ -22,7 +22,6 @@ public class Login {
     }
     
     //Check if pasword meets the correct rule and requirements
-   
             public boolean checkPasswordComplexity(){
 
 
@@ -31,10 +30,10 @@ public class Login {
         boolean isNumber = false ; 
         char currentCharecter ;
 
-            if (Regitration.getPassword().length() >=8) {
+            if (Registration.getPassword().length() >=8) {
                 
                         
-                        for (int i = 0;i < Registratio.getPasword().length(); i++) {
+                        for (int i = 0;i < Registration.getPasword().length(); i++) {
                             
                             currentCharecter = Registration.getPassword().charAt(i);
                             if (Character.isUpperCase(currentCharecter)) {
@@ -54,51 +53,51 @@ public class Login {
                                             
                             }               
                         
-                        //Method enusres the necessary registration mesage and the username is formatted properly or not
+        //Method enusres the necessary registration mesage and the username is formatted properly or not
                         
-                               public String registerUser(){
+                    public String registerUser(){
                                    
                                    
-                                  String nameoutput;
-                                  String passwordpoutput;
+                         String nameoutput;
+                         String passwordpoutput;
                                   
-                                  if (checkUserName()){
-                                      nameoutput = "Username successfully captured;";
+                             if (checkUserName()){
+                                nameoutput = "Username successfully captured;";
                                   }
-                                  else{
-                                      nameoutput = "Username is not correctlty formatted please make sure username incudes an underscore and is no more than 5 charecters in length";
+                             else{
+                                nameoutput = "Username is not correctlty formatted please make sure username incudes an underscore and is no more than 5 charecters in length";
                                       
                                   }
                                   
-                                  if (checkPasswordComplexity()){
+                             if (checkPasswordComplexity()){
                                       passwordpoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
                                       
                                   }
-                                  return passwordpoutput + "\n" + nameoutput;
+                             return passwordpoutput + "\n" + nameoutput;
                                   
                                }}
-                                    //Method ensure that the users login details match the users detals when they firts registered
+        //Method ensure that the users login details match the users detals when they firts registered
                                     
-                                    public boolean loginUser(){
+                    public boolean loginUser(){
                                         
-                                       enteredUserName =JOptionPane.showInputDialog("Enter the username you used to create this account");
+                             enteredUserName =JOptionPane.showInputDialog("Enter the username you used to create this account");
                                        
-                                       enteredPassword =JOptionPane.showInputDialog("Enter the password you used to create this account");
-                                       
-                                       
-                                       return Registration.getUsername().equals(enteredUerName) &&Registration.getPassword().equals(enteredPassword);
+                             enteredPassword =JOptionPane.showInputDialog("Enter the password you used to create this account");
                                        
                                        
-                                    //Method returns the necessary messaging for a succesful login or a afailed login
+                             return Registration.getUsername().equals(enteredUerName) &&Registration.getPassword().equals(enteredPassword);
+                                       
+                                       
+        //Method returns the necessary messaging for a succesful login or a afailed login
                                     
-                                        public String returnLoginStatus(){
+                    public String returnLoginStatus(){
                                             
                                             
-                                            if (loginUser(){
-                                                return "Welcome + Reistration.FirstName +  " " + Registration.Surname + " it is great to see you again" ; 
+                           if (loginUser(){
+                                 return "Welcome + Reistration.FirstName +  " " + Registration.Surname + " it is great to see you again" ; 
                                                 
                                                 
-                                                return "Username or password incorrect, please try again.";
+                                   return "Username or password incorrect, please try again.";
                                                 
                                             }
                                   

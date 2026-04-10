@@ -23,36 +23,8 @@ public class Registration {
     private String Username = "";
     private String Cellphone = "";
 
-    public static void setUsername(){
-        Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
-    }
-    public static String getUsername(){
-        
-        return Username;
-    }
-    
-    public static void setPasword(){
-        Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
-    
-    }
-    public static String  getPassword(){
-        
-        return Password;
-    }
-    public static boolean isValidPhoneNumber(String phoneNumber){
-         String PHONE_REGEX = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
-         return Pattern.matches(PHONE_REGEX, phoneNumber);
-    }
-    
-     public static void setCellphoneNumber(){
-         Cellphone = JOptionPane.showInputDialog("Enter cellphone number");
-    
-     if (isValidPhoneNumber(Cellphone)){
-         JOptionPane.showMessageDialog(null, "Cellphone numer succefully added");
-} else{JOptionPane.showMessageDialog(null, "Cellphone number incorrectely formatted or does not  contain international code");
-        }
-     }
-    public static void setFirstname(){
+   
+       public void setFirstname(){
         Firstname = JOptionPane.showInputDialog("What is your first name");
     } 
         public static String getFirstName(){
@@ -60,13 +32,46 @@ public class Registration {
             return Firstname;
         }
         
-     public static void setSurname(){
+     public void setSurname(){
         Surname = JOptionPane.showInputDialog("What is your Surname");
     } 
         public static String getSurname(){
             
-            return Surname;
-            
+            return Surname;}
+
+        public void setUsername(){
+            Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
+        }
+        public static String getUsername(){
+
+            return Username;
+        }
+
+        public void setPasword(){
+            Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
+
+        }
+        public static String  getPassword(){
+
+            return Password;
+    }
+         public void setCellphoneNumber(){
+         Cellphone = JOptionPane.showInputDialog("Enter cellphone number");
+         }
+         
+    public static boolean isValidPhoneNumber(String phoneNumber){
+         String PHONE_REGEX = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
+         return Pattern.matches(PHONE_REGEX, phoneNumber);
+    }
+    
+    
+    
+     if (isValidPhoneNumber(Cellphone)){
+         JOptionPane.showMessageDialog(null, "Cellphone numer succefully added");
+} else{JOptionPane.showMessageDialog(null, "Cellphone number incorrectely formatted or does not  contain international code");
+        }
+     }
+ 
         }
         public static void main(String[] args) {
             setFirstname();

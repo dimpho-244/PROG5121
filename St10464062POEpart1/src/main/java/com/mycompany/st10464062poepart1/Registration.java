@@ -3,7 +3,7 @@ package com.mycompany.st10464062poepart1;
 
 import java.util.Scanner;
 import javax.swing.JOptionPane;
-import java.util.regex.Pattern;
+
 /**
  *
  * @author user
@@ -21,7 +21,7 @@ public class Registration {
     private String Cellphone = "";
 
    
-       public void setFirstname(){
+       public void setFirstname(String Firstname){
         Firstname = JOptionPane.showInputDialog("What is your first name");
     } 
         public String getFirstName(){
@@ -29,14 +29,14 @@ public class Registration {
             return Firstname;
         }
         
-     public void setSurname(){
+     public void setSurname(String Surname){
         Surname = JOptionPane.showInputDialog("What is your Surname");
     } 
         public String getSurname(){
             
             return Surname;}
 
-        public void setUsername(){
+        public void setUsername(String Username){
             Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
         }
         public String getUsername(){
@@ -44,7 +44,7 @@ public class Registration {
             return Username;
         }
 
-        public void setPasword(){
+        public void setPasword(String Cellphone){
             Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
 
         }

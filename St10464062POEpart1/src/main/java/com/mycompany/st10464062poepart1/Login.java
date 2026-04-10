@@ -5,45 +5,43 @@
 package com.mycompany.st10464062poepart1;
 
 import javax.swing.JOptionPane;
+import java.util.regex.Pattern;
 /**
  *
  * @author user
  */
 public class Login {
-    String enetredUser;
-    String enetredPasword;
-
+    public Registration RegisteredUser = new Registration();
     
     //Check if username includes the right charecters and that it is no more than 5 letters
-    public boolean checkUsername() {
+    public boolean checkUsername(String Username) {
         
-        return (Registration.getUsername().contains("_")&& Registration.getUsername().length() <=5);
+        return (Username.contains("_")&& Username.length() <=5);
         
     }
     
     //Check if pasword meets the correct rule and requirements
-            public boolean checkPasswordComplexity(){
+    public boolean checkPasswordComplexity(String password){
 
-
-        boolean iUpper = false ;
+        boolean isUpper = false ;
         boolean isSpecialCharecter = false ;
         boolean isNumber = false ; 
-        char currentCharecter ;
 
-            if (Registration.getPassword().length() >=8) {
-                
+            if (Password.length() <8) {
+                return false;
+            }
                         
-                        for (int i = 0;i < Registration.getPasword().length(); i++) {
+                        for (int i = 0;i < Password.length(); i++) {
+                            Charecter = Password.charAt(i);
                             
-                            currentCharecter = Registration.getPassword().charAt(i);
-                            if (Character.isUpperCase(currentCharecter)) {
-                                isUpper = true;
-                                else if (Character.isDigit(currentCharecter)) {
-                                        isNumber = true;
-                                        else if (!(Character.isLetterOrDigit(currentCharecter)) {
-                                         isSpecialCharecter = true;
-                              
-                                        }
+                            if (Character.isUpperCase(Charecter)) {
+                                isUpper = true;}
+                            
+                                else if (!Character.isDigit(Charecter)) {
+                                        isNumber = true;}
+                                
+                                        else if (!Character.isLetterOrDigit(Charecter)) {
+                                         isSpecialCharecter = true;}
                                         }
                                         
                                         

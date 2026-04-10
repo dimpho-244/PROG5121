@@ -80,9 +80,9 @@ public class Login {
                                     
                     public boolean loginUser(){
                                         
-                             enteredUserName =JOptionPane.showInputDialog("Enter the username you used to create this account");
+                             enetredUser =JOptionPane.showInputDialog("Enter the username you used to create this account");
                                        
-                             enteredPassword =JOptionPane.showInputDialog("Enter the password you used to create this account");
+                             enetredPasword =JOptionPane.showInputDialog("Enter the password you used to create this account");
                                        
                                        
                              return Registration.getUsername().equals(enteredUerName) &&Registration.getPassword().equals(enteredPassword);

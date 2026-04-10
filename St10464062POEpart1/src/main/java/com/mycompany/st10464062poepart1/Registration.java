@@ -17,11 +17,11 @@ public class Registration {
     
     static Scanner input = new Scanner(System.in);
     
-    public static String Firstname = "";
-    public static String Surname   = "";  
-    private static String Password = "";
-    private static String Username = "";
-    private static String Cellphone = "";
+    public String Firstname = "";
+    public String Surname   = "";  
+    private String Password = "";
+    private String Username = "";
+    private String Cellphone = "";
 
     public static void setUsername(){
         Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");

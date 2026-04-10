@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  */
 public class Registration {
     
-    static Login loginObject = new Login();
+
     
     static Scanner input = new Scanner(System.in);
     
@@ -30,14 +30,14 @@ public class Registration {
         }
         
      public void setSurname(String Surname){
-        Surname = JOptionPane.showInputDialog("What is your Surname");
+        Surname = ;
     } 
         public String getSurname(){
             
             return Surname;}
 
         public void setUsername(String Username){
-            Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
+            Username = ;
         }
         public String getUsername(){
 
@@ -45,15 +45,14 @@ public class Registration {
         }
 
         public void setPasword(String Cellphone){
-            Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
-
+            Password = 
         }
         public String  getPassword(){
 
             return Password;
     }
          public void setCellphoneNumber(){
-         Cellphone = JOptionPane.showInputDialog("Enter cellphone number");
+         Cellphone = 
          }
          
     public static boolean isValidPhoneNumber(String phoneNumber){

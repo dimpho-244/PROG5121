@@ -42,9 +42,7 @@ public class Login {
                                 
                                         else if (!Character.isLetterOrDigit(Charecter)) {
                                          isSpecialCharecter = true;}
-                                        }
-                                        
-                                        
+                                        }      
                             }
                             
                                     return (isUpper && isNumber && isSpecialCharecter)
@@ -88,7 +86,7 @@ public class Login {
                                        
         //Method returns the necessary messaging for a succesful login or a afailed login
                                     
-                    public String returnLoginStatus(){
+        public String returnLoginStatus(){
                                             
                                             
                            if (loginUser(){
@@ -96,8 +94,17 @@ public class Login {
                                                 
                                                 
                                    return "Username or password incorrect, please try again.";
-                                                
-                                            }
+                           }
+                    }                    
+          public static void main (String[] args){
+                    Login login = new Login();  
+                 String Firstname = JOptionPane.showInputDialog("What is your first name");
+                 String Surname = JOptionPane.showInputDialog("What is your Surname");
+                 String Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
+                 String Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
+                 String Cellphone = JOptionPane.showInputDialog("Enter cellphone number and include code");
+                 
+          }
                                   
                                                             
                                             

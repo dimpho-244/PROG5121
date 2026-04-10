@@ -27,7 +27,7 @@ public class Registration {
        public void setFirstname(){
         Firstname = JOptionPane.showInputDialog("What is your first name");
     } 
-        public static String getFirstName(){
+        public String getFirstName(){
             
             return Firstname;
         }
@@ -35,14 +35,14 @@ public class Registration {
      public void setSurname(){
         Surname = JOptionPane.showInputDialog("What is your Surname");
     } 
-        public static String getSurname(){
+        public String getSurname(){
             
             return Surname;}
 
         public void setUsername(){
             Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
         }
-        public static String getUsername(){
+        public String getUsername(){
 
             return Username;
         }
@@ -51,7 +51,7 @@ public class Registration {
             Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
 
         }
-        public static String  getPassword(){
+        public String  getPassword(){
 
             return Password;
     }

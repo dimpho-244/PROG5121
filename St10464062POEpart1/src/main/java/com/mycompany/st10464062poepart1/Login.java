@@ -38,7 +38,7 @@ public class Login {
                             if (Character.isUpperCase(Charecter)) {
                                 isUpper = true;}
                             
-                                else if (!Character.isDigit(Charecter)) {
+                                else if (Character.isDigit(Charecter)) {
                                         isNumber = true;}
                                 
                                         else if (!Character.isLetterOrDigit(Charecter)) {
@@ -48,7 +48,7 @@ public class Login {
                                     return (isUpper && isNumber && isSpecialCharecter);
     }
                                             
-                            }               
+                                           
      public boolean checkCellPhoneNumber(String Cellphone){
          String CphoneRegex = "^\\+\\d{1,3}\\d{1,10}$" ;
          
@@ -94,7 +94,7 @@ public class Login {
                                 RegisteredUser.setFirstname(Firstname);
                                 RegisteredUser.setSurname(Surname);
                                 RegisteredUser.setUsername(Username);
-                                RegisteredUser.setPasword(password);
+                                RegisteredUser.setPassword(password);
                                 RegisteredUser.setCellphoneNumber(Cellphone);
                              }
        
@@ -105,19 +105,21 @@ public class Login {
        
         //Method ensure that the users login details match the users detals when they firts registered
                                     
-                    public boolean loginUser( String enetredUser, String enetredPasword){
+        public boolean loginUser( String enetredUser, String enetredPasword){
           
-                             return RegisteredUser.getUsername() != null;
+                             return 
+                                RegisteredUser.getUsername() != null;
                                 RegisteredUser.getPassword() != null;
                                 RegisteredUser.getUsername().equals(enetredUser);
-                                RegisteredUser.getPassword().equals(enetredPasword);}                       
+                                RegisteredUser.getPassword().equals(enetredPasword);
+        }                       
                                        
         //Method returns the necessary messaging for a succesful login or a afailed login
                                     
         public String returnLoginStatus(String enetredUser, String enetredPasword){
             
                            if (loginUser(enetredUser,enetredPasword)){
-                                 return "Welcome" + RegisteredUser.getFirstName + " "+ RegisteredUser.getSurname "it is great to see you again" ; 
+                                 return "Welcome" + RegisteredUser.getFirstName + " "+ RegisteredUser.getSurname "it is great to see you again"; 
                            } 
                            else{              
                                    return "Username or password incorrect, please try again.";
@@ -134,6 +136,7 @@ public class Login {
                  String RegOutput = Login.RegisteredUser(Firstname, Surname, Username, password, Cellphone);
               JOptionPane.showMessageDialog(null, RegOutput);
           }
+}
                                   
                                                             
                                             

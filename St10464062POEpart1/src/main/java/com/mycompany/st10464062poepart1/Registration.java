@@ -6,8 +6,8 @@ package com.mycompany.st10464062poepart1;
  */
 public class Registration {
      
-    public String Firstname = "";
-    public String Surname   = "";  
+    private String Firstname = "";
+    private String Surname   = "";  
     private String password = "";
     private String Username = "";
     private String Cellphone = "";

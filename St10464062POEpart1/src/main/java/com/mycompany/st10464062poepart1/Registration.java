@@ -22,7 +22,7 @@ public class Registration {
 
    
        public void setFirstname(String Firstname){
-        Firstname = JOptionPane.showInputDialog("What is your first name");
+        this.Firstname = Firstname ;
     } 
         public String getFirstName(){
             
@@ -30,14 +30,14 @@ public class Registration {
         }
         
      public void setSurname(String Surname){
-        Surname = ;
+        this.Surname = Surname;
     } 
         public String getSurname(){
             
             return Surname;}
 
         public void setUsername(String Username){
-            Username = ;
+            this.Username = Username;
         }
         public String getUsername(){
 
@@ -45,44 +45,14 @@ public class Registration {
         }
 
         public void setPasword(String Cellphone){
-            Password = 
+          this.Password = Password;
         }
         public String  getPassword(){
 
             return Password;
     }
          public void setCellphoneNumber(){
-         Cellphone = 
+          this.Cellphone = Cellphone;
          }
-         
-    public static boolean isValidPhoneNumber(String phoneNumber){
-         String PHONE_REGEX = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
-         return Pattern.matches(PHONE_REGEX, phoneNumber);
-    }
-    
-    
-    
-     if (isValidPhoneNumber(Cellphone)){
-         JOptionPane.showMessageDialog(null, "Cellphone numer succefully added");
-} else{JOptionPane.showMessageDialog(null, "Cellphone number incorrectely formatted or does not  contain international code");
-        }
-     }
- 
-        }
-        public static void main(String[] args) {
-            setFirstname();
-            setSurname();
-            setUsername();
-            setPasword();
-            
-            
-                loginObject.registerUser();
-                
-                JOptionPane.showMessageDialog(null,loginObject.returnLoginStatus());
-                
-                
-        }
-                
-    }
-
+}
 

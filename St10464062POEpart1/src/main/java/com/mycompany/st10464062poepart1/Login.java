@@ -63,6 +63,7 @@ public class Login {
        public String registerUser (String Firstname, String Surname, String Password, String Username,String Cellphone){
           String nameoutput;
           String passwordpoutput;
+          String phoneoutput;
        
                                   
                              if (checkUsername(Username)){
@@ -74,10 +75,22 @@ public class Login {
                                   }
                                   
                              if (checkPasswordComplexity(password)){
+                                 passwordpoutput = "Password successfullu captured";
+                             }
+                             else{
                                       passwordpoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
                                       
                                   }
-                             return passwordpoutput + "\n" + nameoutput;
+                             
+                             if (checkCellPhoneNumber(phoneNumber)){
+                                 phoneoutput = "Cell phone number successfully added";
+                             } 
+                                 else{
+                                 phoneoutput = "Cell phone number incorrectly formatted or doe not contain international code.";
+                                         }
+                             
+                             
+                             return passwordpoutput + "\n" + nameoutput + "\n" + phoneoutput;
                                   
                                }
        

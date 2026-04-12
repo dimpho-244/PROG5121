@@ -48,7 +48,15 @@ public class Login {
                                     return (isUpper && isNumber && isSpecialCharecter)
                                             
                             }               
-                        
+     public boolean checkCellPhoneNumber(String phoneNumber){
+         String CphoneRegex = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
+         return Pattern.matches(CphoneRegex, phoneNumber);
+    }
+    
+    
+    public String registerUser (String Firstname, String Surname, String Password, String Username,String Cellphone){
+         
+             
         //Method enusres the necessary registration mesage and the username is formatted properly or not
                         
                     public String registerUser(){

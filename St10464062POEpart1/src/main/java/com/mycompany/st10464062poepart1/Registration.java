@@ -1,19 +1,11 @@
 package com.mycompany.st10464062poepart1;
 
-
-import java.util.Scanner;
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author user
  */
 public class Registration {
-    
-
-    
-    static Scanner input = new Scanner(System.in);
-    
+     
     public String Firstname = "";
     public String Surname   = "";  
     private String Password = "";

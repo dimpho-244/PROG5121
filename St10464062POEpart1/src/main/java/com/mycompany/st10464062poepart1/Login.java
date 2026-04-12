@@ -26,13 +26,14 @@ public class Login {
         boolean isUpper = false ;
         boolean isSpecialCharecter = false ;
         boolean isNumber = false ; 
+        char Charecter;
 
-            if (Password.length() <8) {
+            if (password.length() <8) {
                 return false;
             }
                         
-                        for (int i = 0;i < Password.length(); i++) {
-                            Charecter = Password.charAt(i);
+                        for (int i = 0;i < password.length(); i++) {
+                            Charecter = password.charAt(i);
                             
                             if (Character.isUpperCase(Charecter)) {
                                 isUpper = true;}
@@ -43,29 +44,28 @@ public class Login {
                                         else if (!Character.isLetterOrDigit(Charecter)) {
                                          isSpecialCharecter = true;}
                                         }      
-                            }
                             
-                                    return (isUpper && isNumber && isSpecialCharecter)
+                                    return (isUpper && isNumber && isSpecialCharecter);
+    }
                                             
                             }               
      public boolean checkCellPhoneNumber(String phoneNumber){
-         String CphoneRegex = "^\\\\+\\\\d{1,3}\\\\d{1,10}$" ;
+         String CphoneRegex = "^\\+\\d{1,3}\\d{1,10}$" ;
+         
+      
          return Pattern.matches(CphoneRegex, phoneNumber);
+         
     }
     
-    
-    public String registerUser (String Firstname, String Surname, String Password, String Username,String Cellphone){
-         
              
         //Method enusres the necessary registration mesage and the username is formatted properly or not
                         
-                    public String registerUser(){
-                                   
-                                   
-                         String nameoutput;
-                         String passwordpoutput;
+       public String registerUser (String Firstname, String Surname, String Password, String Username,String Cellphone){
+          String nameoutput;
+          String passwordpoutput;
+       
                                   
-                             if (checkUserName()){
+                             if (checkUsername(Username)){
                                 nameoutput = "Username successfully captured;";
                                   }
                              else{
@@ -73,24 +73,28 @@ public class Login {
                                       
                                   }
                                   
-                             if (checkPasswordComplexity()){
+                             if (checkPasswordComplexity(password)){
                                       passwordpoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
                                       
                                   }
                              return passwordpoutput + "\n" + nameoutput;
                                   
-                               }}
+                               }
+       
         //Method ensure that the users login details match the users detals when they firts registered
                                     
                     public boolean loginUser(){
+                        
+                  String enetredUser;
+                  String enetredPasword;
                                         
                              enetredUser =JOptionPane.showInputDialog("Enter the username you used to create this account");
                                        
                              enetredPasword =JOptionPane.showInputDialog("Enter the password you used to create this account");
                                        
                                        
-                             return Registration.getUsername().equals(enteredUerName) &&Registration.getPassword().equals(enteredPassword);
-                                       
+                             return Registration.getUsername().equals(enteredUser) &&Registration.getPassword().equals(enteredPassword);
+                    }                       
                                        
         //Method returns the necessary messaging for a succesful login or a afailed login
                                     

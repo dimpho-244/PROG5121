@@ -36,15 +36,19 @@ public class Registration {
             return Username;
         }
 
-        public void setPasword(String Cellphone){
+        public void setPasword(String Password){
           this.Password = Password;
         }
         public String  getPassword(){
 
             return Password;
     }
-         public void setCellphoneNumber(){
+         public void setCellphoneNumber(String Cellphone){
           this.Cellphone = Cellphone;
          }
+        public String  getCellphoneNumber(){
+
+            return Cellphone;
+        }
 }
 

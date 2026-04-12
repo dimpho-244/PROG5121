@@ -8,7 +8,7 @@ public class Registration {
      
     public String Firstname = "";
     public String Surname   = "";  
-    private String Password = "";
+    private String password = "";
     private String Username = "";
     private String Cellphone = "";
 
@@ -36,12 +36,12 @@ public class Registration {
             return Username;
         }
 
-        public void setPasword(String Password){
-          this.Password = Password;
+        public void setPassword(String password){
+          this.password = password;
         }
         public String  getPassword(){
 
-            return Password;
+            return password;
     }
          public void setCellphoneNumber(String Cellphone){
           this.Cellphone = Cellphone;

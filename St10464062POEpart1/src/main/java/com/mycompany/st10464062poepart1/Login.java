@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * @author user
  */
 public class Login {
-    public Registration RegisteredUser = new Registration();
+    private Registration RegisteredUser = new Registration();
     
     //Check if username includes the right charecters and that it is no more than 5 letters
     public boolean checkUsername(String Username) {
@@ -49,20 +49,20 @@ public class Login {
     }
                                             
                             }               
-     public boolean checkCellPhoneNumber(String phoneNumber){
+     public boolean checkCellPhoneNumber(String Cellphone){
          String CphoneRegex = "^\\+\\d{1,3}\\d{1,10}$" ;
          
       
-         return Pattern.matches(CphoneRegex, phoneNumber);
+         return Pattern.matches(CphoneRegex, Cellphone);
          
     }
     
              
         //Method enusres the necessary registration mesage and the username is formatted properly or not
                         
-       public String registerUser (String Firstname, String Surname, String Password, String Username,String Cellphone){
+       public String registerUser (String Firstname, String Surname, String password, String Username,String Cellphone){
           String nameoutput;
-          String passwordpoutput;
+          String passwordoutput;
           String phoneoutput;
        
                                   
@@ -75,39 +75,42 @@ public class Login {
                                   }
                                   
                              if (checkPasswordComplexity(password)){
-                                 passwordpoutput = "Password successfullu captured";
+                                 passwordoutput = "Password successfullu captured";
                              }
                              else{
-                                      passwordpoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
+                                      passwordoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
                                       
                                   }
                              
-                             if (checkCellPhoneNumber(phoneNumber)){
+                             if (checkCellPhoneNumber(Cellphone)){
                                  phoneoutput = "Cell phone number successfully added";
                              } 
                                  else{
                                  phoneoutput = "Cell phone number incorrectly formatted or doe not contain international code.";
                                          }
                              
+                             if (checkUsername(Username)&& checkPasswordComplexity(password) && checkCellPhoneNumber(Cellphone)){
+                              
+                                RegisteredUser.setFirstname(Firstname);
+                                RegisteredUser.setSurname(Surname);
+                                RegisteredUser.setUsername(Username);
+                                RegisteredUser.setPasword(password);
+                                RegisteredUser.setCellphoneNumber(Cellphone);
+                             }
+       
                              
-                             return passwordpoutput + "\n" + nameoutput + "\n" + phoneoutput;
+                             return passwordoutput + "\n" + nameoutput + "\n" + phoneoutput;
                                   
                                }
        
         //Method ensure that the users login details match the users detals when they firts registered
                                     
-                    public boolean loginUser(){
-                        
-                  String enetredUser;
-                  String enetredPasword;
-                                        
-                             enetredUser =JOptionPane.showInputDialog("Enter the username you used to create this account");
-                                       
-                             enetredPasword =JOptionPane.showInputDialog("Enter the password you used to create this account");
-                                       
-                                       
-                             return Registration.getUsername().equals(enteredUser) &&Registration.getPassword().equals(enteredPassword);
-                    }                       
+                    public boolean loginUser( String enetredUser, String enetredPasword){
+          
+                             return RegisteredUser.getUsername() != null;
+                                RegisteredUser.getPassword() != null;
+                                RegisteredUser.getUsername().equals(enetredUser);
+                                RegisteredUser.getPassword().equals(enetredPasword);}                       
                                        
         //Method returns the necessary messaging for a succesful login or a afailed login
                                     
@@ -115,9 +118,9 @@ public class Login {
                                             
                                             
                            if (loginUser(){
-                                 return "Welcome + Reistration.FirstName +  " " + Registration.Surname + " it is great to see you again" ; 
-                                                
-                                                
+                                 return "Welcome" + RegisteredUser.getFirstName + " "+RegisteredUser.getSurname "it is great to see you again" ; 
+                           } 
+                           else{              
                                    return "Username or password incorrect, please try again.";
                            }
                     }                    
@@ -126,9 +129,10 @@ public class Login {
                  String Firstname = JOptionPane.showInputDialog("What is your first name");
                  String Surname = JOptionPane.showInputDialog("What is your Surname");
                  String Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
-                 String Password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
+                 String password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
                  String Cellphone = JOptionPane.showInputDialog("Enter cellphone number and include code");
-                 
+            String RegOutput = Login.registerUser(Firstname, Surname, Username, password, Cellphone);
+              JOptionPane.showMessageDialog(null, RegOutput);
           }
                                   
                                                             

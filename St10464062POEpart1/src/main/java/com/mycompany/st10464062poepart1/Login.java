@@ -67,7 +67,7 @@ public class Login {
        
                                   
                              if (checkUsername(Username)){
-                                nameoutput = "Username successfully captured;";
+                                nameoutput = "Username successfully captured";
                                   }
                              else{
                                 nameoutput = "Username is not correctlty formatted please make sure username incudes an underscore and is no more than 5 charecters in length";
@@ -107,10 +107,9 @@ public class Login {
                                     
         public boolean loginUser( String enetredUser, String enetredPasword){
           
-                             return 
-                                RegisteredUser.getUsername() != null;
-                                RegisteredUser.getPassword() != null;
-                                RegisteredUser.getUsername().equals(enetredUser);
+                             return   RegisteredUser.getUsername() != null
+                                RegisteredUser.getPassword() != null
+                                RegisteredUser.getUsername().equals(enetredUser)
                                 RegisteredUser.getPassword().equals(enetredPasword);
         }                       
                                        
@@ -119,7 +118,7 @@ public class Login {
         public String returnLoginStatus(String enetredUser, String enetredPasword){
             
                            if (loginUser(enetredUser,enetredPasword)){
-                                 return "Welcome" + RegisteredUser.getFirstName + " "+ RegisteredUser.getSurname "it is great to see you again"; 
+                                 return "Welcome" + RegisteredUser.getFirstName() + " "+ RegisteredUser.getSurname() + "it is great to see you again"; 
                            } 
                            else{              
                                    return "Username or password incorrect, please try again.";
@@ -133,9 +132,18 @@ public class Login {
                  String password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
                  String Cellphone = JOptionPane.showInputDialog("Enter cellphone number and include code");
            
-                 String RegOutput = Login.RegisteredUser(Firstname, Surname, Username, password, Cellphone);
+                 String RegOutput = Login.registerUser(Firstname, Surname, Username, password, Cellphone);
               JOptionPane.showMessageDialog(null, RegOutput);
-          }
+              
+           if (RegOutput.contains("Username successfully captured")
+                   && RegOutput.contains("Password successfullu captured")
+                   && RegOutput.contains("Cell phone number successfully added")){
+               
+               String enetredUser = JOptionPane.showInputDialog("");
+               String enetredPasword = JOptionPane.showInputDialog("");
+               JOptionPane.showMessageDialog(null, returnLoginStatus(enetredUser,enetredPasword));
+           }
+        }
 }
                                   
                                                             

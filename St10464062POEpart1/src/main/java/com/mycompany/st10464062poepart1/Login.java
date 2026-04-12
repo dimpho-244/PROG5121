@@ -108,9 +108,9 @@ public class Login {
         public boolean loginUser( String enetredUser, String enetredPasword){
           
                              return   RegisteredUser.getUsername() != null
-                                RegisteredUser.getPassword() != null
-                                RegisteredUser.getUsername().equals(enetredUser)
-                                RegisteredUser.getPassword().equals(enetredPasword);
+                               && RegisteredUser.getPassword() != null
+                               && RegisteredUser.getUsername().equals(enetredUser)
+                               && RegisteredUser.getPassword().equals(enetredPasword);
         }                       
                                        
         //Method returns the necessary messaging for a succesful login or a afailed login

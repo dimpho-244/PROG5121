@@ -60,14 +60,14 @@ public class Login {
              
         //Method enusres the necessary registration mesage and the username is formatted properly or not
                         
-       public String registerUser (String Firstname, String Surname, String password, String Username,String Cellphone){
+       public String registerUser (String Firstname, String Surname,String Username, String password , String Cellphone){
           String nameoutput;
           String passwordoutput;
           String phoneoutput;
        
                                   
                              if (checkUsername(Username)){
-                                nameoutput = "Username successfully captured";
+                                nameoutput = "Username successfully captured.";
                                   }
                              else{
                                 nameoutput = "Username is not correctlty formatted please make sure username incudes an underscore and is no more than 5 charecters in length";
@@ -75,7 +75,7 @@ public class Login {
                                   }
                                   
                              if (checkPasswordComplexity(password)){
-                                 passwordoutput = "Password successfullu captured";
+                                 passwordoutput = "Password successfully captured.";
                              }
                              else{
                                       passwordoutput = "Password is not correctely  formatted, please ensure that password contains at least 8 characters, a capital letter and a special charecter"; 
@@ -83,7 +83,7 @@ public class Login {
                                   }
                              
                              if (checkCellPhoneNumber(Cellphone)){
-                                 phoneoutput = "Cell phone number successfully added";
+                                 phoneoutput = "Cell phone number successfully added.";
                              } 
                                  else{
                                  phoneoutput = "Cell phone number incorrectly formatted or doe not contain international code.";
@@ -124,8 +124,9 @@ public class Login {
                                    return "Username or password incorrect, please try again.";
                            }
                     }                    
-          public  void main (String[] args){
-                    Login Login = new Login();  
+          public static void main (String[] args){
+                    Login Login = new Login(); 
+                    
                  String Firstname = JOptionPane.showInputDialog("What is your first name");
                  String Surname = JOptionPane.showInputDialog("What is your Surname");
                  String Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
@@ -135,13 +136,13 @@ public class Login {
                  String RegOutput = Login.registerUser(Firstname, Surname, Username, password, Cellphone);
               JOptionPane.showMessageDialog(null, RegOutput);
               
-           if (RegOutput.contains("Username successfully captured")
-                   && RegOutput.contains("Password successfullu captured")
-                   && RegOutput.contains("Cell phone number successfully added")){
+           if (RegOutput.contains("Username successfully captured.")
+                   && RegOutput.contains("Password successfully captured.")
+                   && RegOutput.contains("Cell phone number successfully added.")){
                
-               String enetredUser = JOptionPane.showInputDialog("");
-               String enetredPasword = JOptionPane.showInputDialog("");
-               JOptionPane.showMessageDialog(null, returnLoginStatus(enetredUser,enetredPasword));
+               String enetredUser = JOptionPane.showInputDialog("Enter the username you used to register");
+               String enetredPasword = JOptionPane.showInputDialog("Enter the password you used to register.");
+               JOptionPane.showMessageDialog(null, Login.returnLoginStatus(enetredUser,enetredPasword));
            }
         }
 }

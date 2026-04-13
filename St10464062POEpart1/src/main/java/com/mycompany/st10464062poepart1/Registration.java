@@ -5,14 +5,14 @@ package com.mycompany.st10464062poepart1;
  * @author user
  */
 public class Registration {
-     
+     //users informations declarations(variables)//
     private String Firstname = "";
     private String Surname   = "";  
     private String password = "";
     private String Username = "";
     private String Cellphone = "";
 
-   
+   //set the users informations, the information is assigned to the declared variables and then they are returned//
        public void setFirstname(String Firstname){
         this.Firstname = Firstname ;
     } 

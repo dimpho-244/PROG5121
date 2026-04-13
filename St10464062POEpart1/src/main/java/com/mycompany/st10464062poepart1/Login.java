@@ -136,11 +136,11 @@ public class Login {
            //the user i the registered//
                  String RegOutput = Login.registerUser(Firstname, Surname, Username, password, Cellphone);
               JOptionPane.showMessageDialog(null, RegOutput);
-              
+           //the message displays to let the user know if they are registered sucessfully or not//   
            if (RegOutput.contains("Username successfully captured.")
                    && RegOutput.contains("Password successfully captured.")
                    && RegOutput.contains("Cell phone number successfully added.")){
-               
+            //the registered user will then login using the regitration information and get a welcome message//    
                String enetredUser = JOptionPane.showInputDialog("Enter the username you used to register");
                String enetredPasword = JOptionPane.showInputDialog("Enter the password you used to register.");
                JOptionPane.showMessageDialog(null, Login.returnLoginStatus(enetredUser,enetredPasword));

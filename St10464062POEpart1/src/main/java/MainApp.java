@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-  import java.util.Scanner
+  import java.util.Scanner;
+  import java.util.Random;
 /**
  *
  * @author user
@@ -78,8 +79,41 @@ public class MainApp {
             System.out.println("2) Discard");
             System.out.println("3) Store");
             
+            int option = input.nextInt();
+            input.nextLine();
+            
+            String result = msg.sentMessage(option);
+            System.out.println(result);
+            
+            if (option == 1 ) {
+                displayMessage("MessageID, hash , reciepient messageText");
             }
+            if (option ==3) {
+                msg.storeMessageJSON(messageID, hash, reciepient, messageText);
+            }
+          }
+            System.out.println("Total messages sent: "+ msg.returnTotalMessages());
+            
+            } else if (choice == 2) {
+                System.out.println("Coming Soon.");
             }
         }
-    }
+            System.out.println("Goodbye");
+            }
+            
+            //Generating of the 10 digit ID 
+            public static String generateMessageID() {
+                Random rand = new Random();
+                long num = (long)(rand.nextDouble() * 100000000001);
+                return String.format("%010d", num);
+            }
+            
+            //Displaying of all the messages 
+            System.out.println("\n--- Message Deatails ---");
+            System.out.println("Message ID: " + id);
+            System.out.println("Message Hash: " + hash);
+            System.out.println("Reciepient: " + reciepient);
+            System.out.println("Message: " + msg);
+
+
 }

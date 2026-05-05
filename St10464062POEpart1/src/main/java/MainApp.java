@@ -82,7 +82,7 @@ public class MainApp {
             int option = input.nextInt();
             input.nextLine();
             
-            String result = msg.sentMessage(option);
+            String result = msg.sentMeage(option);
             System.out.println(result);
             
             if (option == 1 ) {
@@ -114,6 +114,6 @@ public class MainApp {
             System.out.println("Message Hash: " + hash);
             System.out.println("Reciepient: " + reciepient);
             System.out.println("Message: " + msg);
-
+            
 
 }

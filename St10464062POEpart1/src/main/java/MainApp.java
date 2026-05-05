@@ -14,7 +14,7 @@ public class MainApp {
         
         Scanner input = new Scanner(system.in);
        
-        Login login = new 
+        Login login = new Login();
         Message msg = new Message();
         
         //Part of Login from Part 1
@@ -50,7 +50,7 @@ public class MainApp {
                 
             for (int i = 0; i < numMessages; i++) {
                 
-                String messgaeID = generateMessageID();
+                String messageID = generateMessageID();
                 
                 System.out.println("Enter reciepient (+27...): ");
                 String reciepient = input.nextLine();
@@ -64,7 +64,7 @@ public class MainApp {
                String MessageText = input.nextLine();
                
             if (messageText.length() > 250) {
-                int extra = MessageText.length( - 250);
+                int extra = MessageText.length() - 250;
                 System.out.println("Message exceeds 250 charecters by " + extra +", please reduce size.");
                 i--;
                 continue;
@@ -72,7 +72,7 @@ public class MainApp {
             
             System.out.println("Message ready to send.");
             
-            String hash = msg.createMessageHash(MessageID, i, MessageText);
+            String hash = msg.createMessageHash(messageID, i, MessageText);
             System.out.println("Message Hash: " + hash);
             
             System.out.println("1) Send");
@@ -86,7 +86,7 @@ public class MainApp {
             System.out.println(result);
             
             if (option == 1 ) {
-                displayMessage("MessageID, hash , reciepient messageText");
+                displayMessage(messageID, hash , reciepient, messageText);
             }
             if (option ==3) {
                 msg.storeMessageJSON(messageID, hash, reciepient, messageText);
@@ -104,16 +104,17 @@ public class MainApp {
             //Generating of the 10 digit ID 
             public static String generateMessageID() {
                 Random rand = new Random();
-                long num = (long)(rand.nextDouble() * 100000000001);
+                long num = (long)(rand.nextDouble() * 10000000000L);
                 return String.format("%010d", num);
             }
             
             //Displaying of all the messages 
+            public static void displayMesage(String id,String hash, String reciepient, String msg) {
             System.out.println("\n--- Message Deatails ---");
             System.out.println("Message ID: " + id);
             System.out.println("Message Hash: " + hash);
             System.out.println("Reciepient: " + reciepient);
             System.out.println("Message: " + msg);
-            
-
+            }
+          
 }

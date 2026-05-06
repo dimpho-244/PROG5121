@@ -1,9 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package com.mycompany.st10464062poepart1;
-
 import javax.swing.JOptionPane;
 import java.util.regex.Pattern;
 /**
@@ -123,31 +122,8 @@ public class Login {
                            else{              
                                    return "Username or password incorrect, please try again.";
                            }
-                    } 
-        //this is where the users puts in their information//
-          public static void main (String[] args){
-                    Login Login = new Login(); 
-                 //the messages that the user will find to enter their information so that they can be collected//   
-                 String Firstname = JOptionPane.showInputDialog("What is your first name");
-                 String Surname = JOptionPane.showInputDialog("What is your Surname");
-                 String Username = JOptionPane.showInputDialog("Please enter a username that contains an underscore (_) and is no more than 5 letters");
-                 String password = JOptionPane.showInputDialog("Please enter a password that has a minimum of 8 charecters, has a special charecter and has an uppercase ");
-                 String Cellphone = JOptionPane.showInputDialog("Enter cellphone number and include code");
-           //the user i the registered//
-                 String RegOutput = Login.registerUser(Firstname, Surname, Username, password, Cellphone);
-              JOptionPane.showMessageDialog(null, RegOutput);
-           //the message displays to let the user know if they are registered sucessfully or not//   
-           if (RegOutput.contains("Username successfully captured.")
-                   && RegOutput.contains("Password successfully captured.")
-                   && RegOutput.contains("Cell phone number successfully added.")){
-            //the registered user will then login using the regitration information and get a welcome message//    
-               String enetredUser = JOptionPane.showInputDialog("Enter the username you used to register");
-               String enetredPasword = JOptionPane.showInputDialog("Enter the password you used to register.");
-               JOptionPane.showMessageDialog(null, Login.returnLoginStatus(enetredUser,enetredPasword));
-           }
-        }
-}
-                                  
+                        } 
+                     }
                                                             
                                             
                         

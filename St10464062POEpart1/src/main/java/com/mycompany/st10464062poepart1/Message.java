@@ -2,8 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.st10464062poepart1;
-import java.io.FileWriter;
+ package com.mycompany.st10464062poepart1;
+ import java.io.FileWriter;
  import java.io.IOException;
 /**
  *
@@ -36,7 +36,7 @@ public class Message {
     //Handling of the users choice 
     public String sentMessages(int option) {
         
-     if  (option == 1) {
+     if (option == 1) {
          totalMesages++;
          return "Message sucessfully sent.";
          

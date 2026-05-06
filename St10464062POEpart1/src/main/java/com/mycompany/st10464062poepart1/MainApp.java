@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+  package com.mycompany.st10464062poepart1;
   import javax.swing.JOptionPane;
   import java.util.Scanner;
   import java.util.Random;
@@ -25,7 +26,7 @@ public class MainApp {
         String Password =JOptionPane.showInputDialog("Please enter a password charecter and has an that has a minimum of 8 charecters, has a special chraecter and has an uppercase ");
         String Cellphone =JOptionPane.showInputDialog("Enter cellphone number and include code");
         
-        String RegOutput = login.registerUser(Firstname, Surname, Username, password, Cellphone);
+        String RegOutput = login.registerUser(Firstname, Surname, Username, Password, Cellphone);
         JOptionPane.showMessageDialog(null, RegOutput);
         
         if (!(RegOutput.contains("Username sucessfully captured.")
@@ -48,10 +49,10 @@ public class MainApp {
         
         while (choice !=3) {
           
-           choice = Integer.parseInt(JOptionPane.showInputDialog(
-                    "1) Send Messages\n"
-                  +  "2) Show recentely sent messages\n"
-                  +  "3) Quit"));
+           choice = Integer.parseInt(JOptionPane.showInputDialog("""
+                                                                 1) Send Messages
+                                                                 2) Show recentely sent messages
+                                                                 3) Quit"""));
               
             
             if (choice ==1) {
@@ -84,10 +85,10 @@ public class MainApp {
             
             String hash = msg.createMessageHash(messageID, i, messageText);
             
-            int option = Integer.parseInt(JOptionPane.showInputDialog(
-            "1) Send\n"
-           + "2) Discard\n"
-           + "3) Store"));
+            int option = Integer.parseInt(JOptionPane.showInputDialog("""
+                                                                      1) Send
+                                                                      2) Discard
+                                                                      3) Store"""));
             
             String result = msg.sentMessages(option);
             JOptionPane.showMessageDialog(null, result);
@@ -117,8 +118,9 @@ public class MainApp {
             //Displaying of all the messages 
             public static void displayMesage(String id, String hash, String reciepient, String msg) {
                 JOptionPane.showMessageDialog(null, 
-                        "--- Message Details ---"
-                       + "\nMessage ID: " + id
+                        """
+                        --- Message Details ---
+                        Message ID: """ + id
                        + "\nMessage Hash: " + hash
                        + "\nReciepient: " + reciepient
                        + "\nMessage: " + msg);

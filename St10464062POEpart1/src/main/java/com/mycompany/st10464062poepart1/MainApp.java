@@ -29,8 +29,8 @@ public class MainApp {
         JOptionPane.showMessageDialog(null, RegOutput);
         
         if (!(RegOutput.contains("Username successfully captured.")
-                && RegOutput.contains("Password sucessfully captured.")
-                && RegOutput.contains("Cellphone number successfully added."))) {
+                && RegOutput.contains("Password successfully captured.")
+                && RegOutput.contains("Cell phone number successfully added."))) {
             return;
         }
         

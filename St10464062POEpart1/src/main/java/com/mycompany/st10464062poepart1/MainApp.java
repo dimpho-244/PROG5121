@@ -3,8 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
   package com.mycompany.st10464062poepart1;
+  
   import javax.swing.JOptionPane;
-  import java.util.Scanner;
   import java.util.Random;
 /**
  *
@@ -14,7 +14,6 @@ public class MainApp {
     
     public static void main(String[] args) {
         
-        Scanner input = new Scanner(System.in);
        
         Login login = new Login();
         Message msg = new Message();
@@ -29,9 +28,9 @@ public class MainApp {
         String RegOutput = login.registerUser(Firstname, Surname, Username, Password, Cellphone);
         JOptionPane.showMessageDialog(null, RegOutput);
         
-        if (!(RegOutput.contains("Username sucessfully captured.")
+        if (!(RegOutput.contains("Username successfully captured.")
                 && RegOutput.contains("Password sucessfully captured.")
-                && RegOutput.contains("Cellphone number sucessfully added."))) {
+                && RegOutput.contains("Cellphone number successfully added."))) {
             return;
         }
         

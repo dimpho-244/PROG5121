@@ -3,13 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.st10464062poepart1;
+
 import javax.swing.JOptionPane;
 import java.util.regex.Pattern;
 /**
  *
  * @author user
  */
-public class Login {
+   public class Login {
    
     private Registration RegisteredUser = new Registration();
     

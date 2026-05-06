@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MesageTest {
     
-    Message msg = new Message();
+    message msg = new message();
     
     //Message ID
     public void testMessageIDValid() {

@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
  package com.mycompany.st10464062poepart1;
+ 
  import java.io.FileWriter;
  import java.io.IOException;
+ import javax.swing.JOptionPane;
 /**
  *
  * @author user
@@ -12,7 +14,7 @@
 
 public class Message {
     
-    private int totalMesages = 0;
+    private static int totalMesages = 0;
      
     //Checking the lenghth of the ID
     public boolean checkMessageID(String id) {
@@ -39,10 +41,8 @@ public class Message {
      if (option == 1) {
          totalMesages++;
          return "Message sucessfully sent.";
-         
      } else if (option ==2) {
          return "Message disregarded";
-         
      } else if (option ==3) {
          return "Message ucessfully stored.";
          
@@ -68,7 +68,7 @@ public class Message {
             
             file.close();
         } catch (IOException e) {
-            System.out.println("Error saving message");
+            JOptionPane.showMessageDialog(null, "Error saving message");
         }
     }
 }

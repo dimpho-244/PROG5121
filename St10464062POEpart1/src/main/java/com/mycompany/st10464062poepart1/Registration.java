@@ -1,4 +1,4 @@
-package com.mycompany.st10464062poe;
+package com.mycompany.st10464062poepart1;
 
 /**
  *

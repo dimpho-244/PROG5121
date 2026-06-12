@@ -6,7 +6,7 @@
  
  import java.io.FileWriter;
  import java.io.IOException;
- import java.util.ArrayList;
+import
  import javax.swing.JOptionPane;
 /**
  *
@@ -16,15 +16,6 @@
 public class Message {
     
     private static int totalMesages = 0;
-    
-    private ArrayList<String> sentMessages = new ArrayList<>() ;
-    private ArrayList<String> storedMessages = new ArrayList<>() ;
-    private ArrayList<String> disregardedMessages = new ArrayList<>() ;
-    
-    private ArrayList<String> MessageIDs = new ArrayList<>() ;
-    private ArrayList<String> reciepients = new ArrayList<>() ;
-    private ArrayList<String> messageHashes = new ArrayList<>() ;
-    
      
     //Checking the lenghth of the ID
     public boolean checkMessageID(String id) {
@@ -32,7 +23,7 @@ public class Message {
     } 
     //Checking the SA number (+27...)
     public boolean checkReciepientCell(String number) {
-        return number.matches("^\\+27\\d{9}$");
+        return number.matches("^\\\\+27\\\\d{9}$");
     }
     //Creating of the mesage hash
     public String createMessageHash(String id, int msgNum, String Message) {
@@ -63,7 +54,8 @@ public class Message {
     public int returnTotalMessages() {
         return totalMesages;
     }
-    //Part 3 Methods 
+
+//Part 3 Methods 
     public void storeMessageJSON(String id, String hash, String reciepient, String message, int option) {
         
         messageID.add(id);

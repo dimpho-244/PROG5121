@@ -16,7 +16,7 @@ public class MainApp {
         
        
         Login login = new Login();
-        Message msg = new Message();vv
+        Message msg = new Message();
         
         //Part of Login from Part 1
         String Firstname =JOptionPane.showInputDialog("What is your first name");
@@ -49,21 +49,9 @@ public class MainApp {
         while (choice !=3) {
           
            choice = Integer.parseInt(JOptionPane.showInputDialog("""
-                                                                       "1) Send Messages\n"
-                                                                 
-                                                                     + "2) Display Sent Messages\n"
-
-                                                                     + "3) Display Longest Message\n"
-   
-                                                                     + "4) Search Message ID\n"
-                                                                 
-                                                                     + "5) Search Recipient\n"
-                                                                 
-                                                                     + "6) Delete Message Using Hash\n"
-                                                                 
-                                                                     + "7) Display Report\n"
-                                                                 
-                                                                     + "8) Quit"));
+                                                                 1) Send Messages
+                                                                 2) Show recentely sent messages
+                                                                 3) Quit"""));
               
             
             if (choice ==1) {
